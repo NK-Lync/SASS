@@ -1,0 +1,92 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: v.$white;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+
+  .nav-container {
+    @include m.container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: v.$spacing-small;
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    .brand-icon {
+      color: v.$primary-color;
+    }
+
+    .brand-highlight {
+      color: v.$primary-color;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: v.$spacing-large;
+    list-style: none;
+
+    a {
+      color: v.$dark-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: v.$primary-color;
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-button {
+    display: none;
+    cursor: pointer;
+  }
+}
+
+@include m.tablet {
+  .navbar {
+    .nav-list {
+      gap: v.$spacing-medium;
+    }
+  }
+}
+
+@include m.mobile {
+  .navbar {
+    .nav-container {
+      flex-wrap: wrap;
+    }
+
+    .menu-button {
+      display: block;
+    }
+
+    .nav-list {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: v.$spacing-medium 0;
+    }
+
+    .menu-toggle:checked ~ .nav-list {
+      display: flex;
+    }
+  }
+}

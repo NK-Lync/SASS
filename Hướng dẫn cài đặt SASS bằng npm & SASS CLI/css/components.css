@@ -1,0 +1,27 @@
+.card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.0823529412);
+}
+.card h2 {
+  color: #04aa6d;
+  margin-bottom: 12px;
+}
+.card p {
+  color: #333333;
+  line-height: 1.6;
+}
+.card .button {
+  display: inline-block;
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.card .button:hover {
+  background-color: #059862;
+}
+
+/*# sourceMappingURL=components.css.map */

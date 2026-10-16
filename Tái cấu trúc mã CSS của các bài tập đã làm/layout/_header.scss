@@ -1,0 +1,105 @@
+@use "../scss/abstracts/variables" as v;
+
+// Header with background image
+.header {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 520px;
+  padding: 100px 24px 90px;
+  overflow: hidden;
+  text-align: center;
+  color: v.$white;
+  background-image: url("../images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+
+  h1 {
+    margin-bottom: 18px;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+  }
+}
+
+// Dark overlay above the background image
+.header-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.82),
+    rgba(15, 118, 110, 0.62)
+  );
+}
+
+.header-content {
+  max-width: 850px;
+  animation: fade-in 0.8s ease both;
+
+  p {
+    margin-bottom: 32px;
+    color: #e2e8f0;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #5eead4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 25px;
+  border: 1px solid v.$primary-color;
+  border-radius: v.$border-radius;
+  background: v.$primary-color;
+  color: v.$white;
+  font-size: 15px;
+  font-weight: 700;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    background: v.$primary-dark;
+    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.25);
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #e2e8f0;
+  font-size: 12px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

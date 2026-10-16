@@ -1,0 +1,61 @@
+h1 {
+  font-size: 32px;
+  color: #222;
+}
+
+h2 {
+  font-size: 28px;
+  color: #222;
+}
+
+body {
+  margin: 0;
+  padding: 30px 16px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 10px;
+}
+
+.button {
+  background: rgb(0, 17, 255);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.button:hover {
+  opacity: 0.8;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.card p {
+  line-height: 1.6;
+}
+
+/*# sourceMappingURL=style.css.map */

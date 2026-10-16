@@ -1,0 +1,40 @@
+
+@use "variables" as v;
+@use "components";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: v.$background-color;
+    color: v.$text-color;
+}
+
+.header {
+    background-color: v.$secondary-color;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .card-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,30 @@
+@use "variables" as v;
+
+// Căn giữa nội dung bằng Flexbox
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Giới hạn chiều rộng nội dung
+@mixin container {
+  width: 100%;
+  max-width: v.$container-width;
+  margin: 0 auto;
+  padding: 0 v.$spacing-medium;
+}
+
+// Responsive tablet
+@mixin tablet {
+  @media (max-width: v.$tablet-breakpoint) {
+    @content;
+  }
+}
+
+// Responsive mobile
+@mixin mobile {
+  @media (max-width: v.$mobile-breakpoint) {
+    @content;
+  }
+}

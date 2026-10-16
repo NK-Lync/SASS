@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as v;
+
+h1 {
+  font-size: v.$font-large;
+  color: v.$text-color;
+}
+
+h2 {
+  font-size: v.$font-medium;
+  color: v.$text-color;
+}
+
+body {
+  margin: 0;
+  padding: 30px 16px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 10px;
+}

@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.button {
+  @include m.button-style(v.$primary-color);
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

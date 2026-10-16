@@ -1,0 +1,32 @@
+
+@use "variables" as v;
+
+.card {
+    background-color: white;
+    padding: 24px;
+    border-radius: v.$border-radius;
+    box-shadow: 0 2px 8px #00000015;
+
+    h2 {
+        color: v.$primary-color;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: v.$text-color;
+        line-height: 1.6;
+    }
+
+    .button {
+        display: inline-block;
+        background-color: v.$primary-color;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #059862;
+        }
+    }
+}
